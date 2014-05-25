@@ -2,26 +2,22 @@
 #include <cstdio>
 #include <cstdlib>
 #include <fstream>
+#define maxLine 1000
 using namespace std;
-
 int main() {
-    int cnt = 0;
-    char aline[100];
-    memset(aline, 0 , 100);
+    int cnt = 0;            //a counter which count the number of line
+    char aline[maxLine];
+    memset(aline, 0 , maxLine);
  
-    fstream ifs("test.in");
-    if(!ifs)
-    {
-        cout << "can not open file..." << endl;
-    }
+    fstream ifs("test.in"); //standard file input is test.in
+    if(!ifs){cout << "can not open file..." << endl;}
  
-    while(ifs)
-    {
-        ifs.getline(aline, 100);
+    while(ifs){
+        ifs.getline(aline, maxLine);
         cout <<"line "<< cnt+1 << ":" << aline << endl;
         cnt++;
-        memset(aline, 0 , 100);
+        memset(aline, 0 , maxLine);
     }
-    ifs.close();
+    ifs.close();            //close file
     return 0;
 }
