@@ -1,6 +1,8 @@
 #include <string>
+#include <iostream>
 
-class Reader(str){
+
+class Scaner(str){
 	string data=str;
 	int currPos=0;
 	str dataLength = length(str);
@@ -12,7 +14,7 @@ class Reader(str){
 		return data[currPos++];
 	}
 	
-	reTract(n){
+	retract(n){
 		if( n == undefine){n=1;}
 		currPos-=n;
 		if(currPos<0){currPos=0;}
