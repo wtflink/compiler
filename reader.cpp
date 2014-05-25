@@ -12,6 +12,11 @@ class Reader(str){
 		return data[currPos++];
 	}
 	
-	
+	reTract(n){
+		if( n == undefine){n=1;}
+		currPos-=n;
+		if(currPos<0){currPos=0;}
+	}
+
 
 }
